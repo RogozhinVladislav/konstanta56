@@ -1,23 +1,32 @@
-import logo from './logo.svg';
+import React, { useState } from 'react';
+import { Form, Input, Button, Radio } from 'antd';
+import { Typography } from 'antd';
+
+
 import './App.css';
+
+const { Title } = Typography;
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <Title>Konstanta 56</Title>
+
+      <Form
+        onValuesChange={() => { }}
+      >
+        <Form.Item label="Длина">
+          <Input placeholder="Введите длину" />
+        </Form.Item>
+        <Form.Item label="Ширина">
+          <Input placeholder="Введите ширину" />
+        </Form.Item>
+        <Form.Item >
+          <Button type="primary">Рассчитать</Button>
+        </Form.Item>
+      </Form>
+
     </div>
   );
 }
